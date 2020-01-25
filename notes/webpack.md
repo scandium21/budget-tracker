@@ -5,7 +5,7 @@
 - `yarn add webpack@3.1.0`
 - change package.json to:
 
-```
+```js
 "scripts": {
     "build": "webpack --watch",
     "dev": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch"
@@ -15,7 +15,8 @@
 - add `webpact.config.js` in root dir, in it:
 
   - specify entry point -> output
-  - ```
+
+    ```js
     const path = require("path");
 
     module.exports = {
