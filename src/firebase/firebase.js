@@ -17,22 +17,24 @@ firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 
+export { firebase, database as default };
+
 // subscribers
 // child_removed
-database.ref("expenses").on("child_removed", snapshot => {
-  console.log(snapshot.key, snapshot.val());
-});
+// database.ref("expenses").on("child_removed", snapshot => {
+//   console.log(snapshot.key, snapshot.val());
+// });
 
-// child_changed
-database.ref("expenses").on("child_changed", snapshot => {
-  console.log(snapshot.key, snapshot.val());
-});
-// -Lz_VWrQd4qSdNPKG_wJ {amount: 2101, createdAt: 943889834572, description: "Water bill", note: ""}
+// // child_changed
+// database.ref("expenses").on("child_changed", snapshot => {
+//   console.log(snapshot.key, snapshot.val());
+// });
+// // -Lz_VWrQd4qSdNPKG_wJ {amount: 2101, createdAt: 943889834572, description: "Water bill", note: ""}
 
-// child_added
-database.ref("expenses").on("child_added", snapshot => {
-  console.log(snapshot.key, snapshot.val());
-});
+// // child_added
+// database.ref("expenses").on("child_added", snapshot => {
+//   console.log(snapshot.key, snapshot.val());
+// });
 // also gets called for existing ones
 
 // database.ref("expenses").on("value", snapshot => {

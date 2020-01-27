@@ -12,29 +12,29 @@ import "./firebase/firebase";
 
 const store = configureStore();
 
-store.dispatch(
-  addExpense({
-    description: "water bill",
-    amount: 200
-  })
-);
-store.dispatch(
-  addExpense({
-    description: "gas bill",
-    amount: 400,
-    createdAt: 1000
-  })
-);
-store.dispatch(
-  addExpense({
-    description: "Rent",
-    amount: 109500
-  })
-);
+// store.dispatch(
+//   addExpense({
+//     description: "water bill",
+//     amount: 200
+//   })
+// );
+// store.dispatch(
+//   addExpense({
+//     description: "gas bill",
+//     amount: 400,
+//     createdAt: 1000
+//   })
+// );
+// store.dispatch(
+//   addExpense({
+//     description: "Rent",
+//     amount: 109500
+//   })
+// );
 
-console.log(
-  getVisibleExpenses(store.getState().expenses, store.getState().filters)
-);
+// console.log(
+//   getVisibleExpenses(store.getState().expenses, store.getState().filters)
+// );
 
 const jsx = (
   <Provider store={store}>
