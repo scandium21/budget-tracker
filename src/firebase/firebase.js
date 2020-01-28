@@ -16,8 +16,9 @@ firebase.initializeApp(firebaseConfig);
 // firebase ref: https://firebase.google.com/docs/reference/js/firebase.database.Query?authuser=0
 
 const database = firebase.database();
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
-export { firebase, database as default };
+export { firebase, googleAuthProvider, database as default };
 
 // subscribers
 // child_removed
