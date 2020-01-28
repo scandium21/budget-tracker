@@ -1,4 +1,3 @@
-import uuid from "uuid";
 import database from "../firebase/firebase";
 // update redux store
 // component calls action generator
@@ -46,6 +45,21 @@ export const removeExpense = ({ id } = {}) => ({
   type: "REMOVE_EXPENSE",
   id
 });
+
+export const startRemoveExpense = ({ id }) => {
+  return dispatch => {
+    database
+      .ref(`expenses/${id}`)
+      .remove()
+      .then(() => {
+        dispatch(
+          removeExpense({
+            id
+          })
+        );
+      });
+  };
+};
 
 // edit_expense
 export const editExpense = (id, updates) => ({
